@@ -20,7 +20,7 @@ class TasksController < ApplicationController
       flash[:success] = '正常に投稿されました'
       redirect_to @task
     else
-      flash.now[danger] = '投稿されませんでした'
+      flash.now[:danger] = '投稿されませんでした'
       render :new
     end
   end
@@ -58,6 +58,6 @@ class TasksController < ApplicationController
   
   #Storong Parameter
   def task_params
-    params.require(:task).permit(:content)
+    params.require(:task).permit(:content, :status)
   end
 end
