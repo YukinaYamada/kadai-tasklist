@@ -3,6 +3,6 @@
 <p>ステータス: <%= @task.status %></p>
 <p>メッセージ: <%= @task.content %></p>
 
-<%= link_to '一覧に戻る',task_path %>
+<%= link_to '一覧に戻る',tasks_path %>
 <%= link_to '編集する', edit_task_path(@task) %>
 <%= link_to 'このメッセージを削除する', @task, method: :delete, data: { confirm: '削除してよろしいですか？' } %>
